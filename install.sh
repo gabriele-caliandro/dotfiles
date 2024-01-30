@@ -20,9 +20,9 @@ if [ -f "$ZSHRC" ]; then
 fi
 
 echo >> $SH
-echo '# -------------- bartekspitza:dotfiles install ---------------' >> $SH
+echo '# -------------- gabriele-caliandro:dotfiles install ---------------' >> $SH
 
-# Ask which files should be sourced
+# Ask which files inside shell should be sourced
 echo "Do you want $SH to source: "
 for file in shell/*; do
     if [ -f "$file" ]; then
@@ -41,7 +41,7 @@ if ask "Create .ssh_aliases to be sourced?"; then
     echo 'source ~/.ssh_aliases' >> "$SH"
 fi
 
-echo '# -------------- bartekspitza:dotfiles install ---------------' >> $SH
+echo '# -------------- gabriele-caliandro:dotfiles install ---------------' >> $SH
 
 # Tmux conf
 if ask "Do you want to install .tmux.conf?"; then
@@ -49,6 +49,6 @@ if ask "Do you want to install .tmux.conf?"; then
 fi
 
 # Vim conf
-if ask "Do you want to install .vimrc?"; then
-    ln -s "$(realpath ".vimrc")" ~/.vimrc
-fi
+# if ask "Do you want to install .vimrc?"; then
+#     ln -s "$(realpath ".vimrc")" ~/.vimrc
+# fi
